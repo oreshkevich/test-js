@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+</head>
+
+<body class="body">
+  <main>
+    <section class="feedback">
+      <div class="container">
+
+        <div class="feedback__wrap">
+          <div class="feedback__item">
+            <h1 class="feedback__item-title">форма обратной связи</h1>
+            <form class="feedback__form ">
+              <div class="feedback__input-wrap ">
+                <input type="text" minlength="3" maxlength="10" id="name" value="" class="feedback__input"
+                  autocomplete="off" name="name" placeholder="Имя" required>
+                <p class="feedback__error feedback__error_name">Имя должно быть больше 3 букв</p>
+              </div>
+              <div class="feedback__input-wrap ">
+                <input type="email" id="email" name="email" maxlength="30" class="feedback__input" autocomplete="off"
+                  placeholder="E-mail" value="" required>
+                <p class="feedback__error feedback__error_email">некорректный email</p>
+              </div>
+              <div class="feedback__input-wrap ">
+                <input class="feedback__input phone" required type="tel" name="tel" id="phone"
+                  placeholder="+7(_ _ _)_ _-_ _-_ _" value="">
+                <p class="feedback__error feedback__error_phone">введите корректный номер</p>
+              </div>
+              <div class="feedback__input-wrap ">
+                <textarea name="textarea" id="textarea" cols="30" value="" rows="10" placeholder="введите сообщение"
+                  class="feedback__input feedback__input_textarea"></textarea>
+                <p class="feedback__error feedback__error_text">Это обязательное поле и больше 5 букв</p>
+              </div>
+              <button type="submit" class="feedback__button" id="button" disabled>
+                Отправить
+              </button>
+              <div class="feedback__msg">
+                <p class="feedback__error feedback__error_server ">Ошибка сервера</p>
+                <p class="feedback__success ">Данные отправлены успешно!</p>
+              </div>
+            </form>
+            <button class="feedback__button more">
+              модальное окно
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      </div>
+    </section>
+    <div role="button" class="feedback-modal__overlay hidden" aria-label="закрыть модальное окно">
+      <div class="feedback-modal__wrapper">
+        <h2 class="feedback-modal__title">Всем привет</h2>
+        <button type="button" class="feedback-modal__close" aria-label="закрыть модальное окно">&#10006;</button>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
