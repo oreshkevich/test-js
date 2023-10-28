@@ -109,7 +109,7 @@ form?.addEventListener('submit', (event) => {
         feedbackSuccess.innerText = data.message;
         form.reset();
         button.disabled = true;
-        setTimeout(() => feedbackSuccess.classList.remove('active'), 4000);
+        setTimeout(() => feedbackSuccess.classList.remove('active'), 2000);
       } else {
         let errorServer = data.fields;
         let inputNameError = errorServer?.inputName;
@@ -123,7 +123,7 @@ form?.addEventListener('submit', (event) => {
     .catch((error) => {
       feedbackErrorServer.classList.add('active');
       feedbackErrorServer.innerText = error.message;
-      setTimeout(() => feedbackErrorServer.classList.remove('active'), 4000);
+      setTimeout(() => feedbackErrorServer.classList.remove('active'), 2000);
     });
 });
 
